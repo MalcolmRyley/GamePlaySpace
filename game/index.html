@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Craftly — Ideas Worth Making</title>
+<meta name="description" content="Craftly is a blog for arts, crafts and DIY lovers, with step-by-step tutorials for painting, paper crafts, sewing, home DIY, upcycling, kids crafts and seasonal projects.">
+<meta name="keywords" content="arts and crafts blog, DIY tutorials, paper crafts, sewing projects, home DIY ideas, kids crafts, upcycling ideas">
+<link id="canonical-link" rel="canonical" href="https://craftly.blog/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Craftly">
+<meta property="og:title" content="Craftly — Ideas Worth Making">
+<meta property="og:description" content="Simple, creative tutorials for painting, paper crafts, sewing, DIY and more.">
+<meta property="og:url" content="https://craftly.blog/">
+<meta property="og:image" content="https://craftly.blog/social-preview.jpg">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Craftly — Ideas Worth Making">
+<meta name="twitter:description" content="Simple, creative tutorials for painting, paper crafts, sewing, DIY and more.">
+
+<script type="application/ld+json" id="ld-org">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "name": "Craftly", "url": "https://craftly.blog/", "logo": "https://craftly.blog/logo.png", "sameAs": [] },
+    { "@type": "WebSite", "name": "Craftly", "url": "https://craftly.blog/" }
+  ]
+}
+</script>
+<script type="application/ld+json" id="ld-dynamic"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;0,700;1,600&family=Nunito+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://images.unsplash.com">
+
+<style>
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;}
+img{display:block;max-width:100%;}
+a{color:inherit;}
+button{font-family:inherit;}
+ul,ol{list-style:none;margin:0;padding:0;}
+
+:root{
+  --cream:#FBF6EE;
+  --cream-deep:#F3E9D8;
+  --coral:#D96C4F;
+  --coral-deep:#B8543A;
+  --ink:#2C2622;
+  --ink-soft:#6B6259;
+  --ink-mute:#9C9288;
+  --mustard:#E3A857;
+  --mustard-deep:#C68A3E;
+  --line:#EFE3D3;
+  --line-dark:rgba(255,255,255,.14);
+  --success:#3E7D5B;
+  --white:#FFFFFF;
+  --radius:12px;
+  --radius-sm:8px;
+  --radius-pill:999px;
+  --container:1260px;
+  --shadow-card:0 1px 2px rgba(44,38,34,.05), 0 10px 24px rgba(44,38,34,.08);
+  --shadow-card-hover:0 4px 12px rgba(44,38,34,.09), 0 20px 38px rgba(44,38,34,.14);
+  --font-display:'Bitter', serif;
+  --font-body:'Nunito Sans', sans-serif;
+  --font-script:'Caveat', cursive;
+}
+
+body{
+  font-family:var(--font-body);
+  background:var(--white);
+  color:var(--ink);
+  line-height:1.63;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{ font-family:var(--font-display); font-weight:700; margin:0 0 .45em; line-height:1.2; }
+p{ margin:0 0 1em; }
+.container{ max-width:var(--container); margin:0 auto; padding:0 24px; }
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible, summary:focus-visible{ outline:2px solid var(--coral-deep); outline-offset:2px; }
+.sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+@media (prefers-reduced-motion: reduce){ *,*::before,*::after{ animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; } }
+
+.eyebrow{ font-family:var(--font-body); text-transform:uppercase; letter-spacing:.15em; font-size:.7rem; font-weight:700; color:var(--coral-deep); margin:0 0 10px; }
+.script-note{ font-family:var(--font-script); font-weight:700; font-size:1.4rem; line-height:1.2; color:var(--coral-deep); }
+
+.ph{ width:100%; height:100%; object-fit:cover; display:block; filter:saturate(1.05) contrast(1.02) brightness(1.02); }
+
+/* Animations */
+@keyframes fadeInUp{ from{ opacity:0; transform:translateY(20px); } to{ opacity:1; transform:translateY(0); } }
+@keyframes fadeIn{ from{ opacity:0; } to{ opacity:1; } }
+@keyframes pulseBadge{ 0%{ transform:scale(1); } 35%{ transform:scale(1.35); } 60%{ transform:scale(.94); } 100%{ transform:scale(1); } }
+.hero-copy{ animation:fadeInUp .8s ease-out both; }
+.hero-visual{ animation:fadeIn 1s ease-out .15s both; }
+.reveal{ opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease; }
+.reveal.visible{ opacity:1; transform:translateY(0); }
+.reveal-stagger.visible .article-card, .reveal-stagger.visible .cat-item{ animation:fadeInUp .55s ease-out both; }
+.reveal-stagger .article-card:nth-child(1),.reveal-stagger .cat-item:nth-child(1){ animation-delay:.02s; }
+.reveal-stagger .article-card:nth-child(2),.reveal-stagger .cat-item:nth-child(2){ animation-delay:.08s; }
+.reveal-stagger .article-card:nth-child(3),.reveal-stagger .cat-item:nth-child(3){ animation-delay:.14s; }
+.reveal-stagger .article-card:nth-child(4),.reveal-stagger .cat-item:nth-child(4){ animation-delay:.20s; }
+.reveal-stagger .cat-item:nth-child(5){ animation-delay:.26s; }
+.reveal-stagger .cat-item:nth-child(6){ animation-delay:.32s; }
+.reveal-stagger .cat-item:nth-child(7){ animation-delay:.38s; }
+.badge-count.pulse{ animation:pulseBadge .45s ease-out; }
+
+/* Buttons */
+.btn{ display:inline-flex; align-items:center; justify-content:center; gap:8px; padding:14px 27px; border-radius:var(--radius-pill); font-weight:700; font-size:.88rem; text-decoration:none; border:1px solid transparent; cursor:pointer; transition:background .15s ease, border-color .15s ease, color .15s ease, transform .15s ease, box-shadow .15s ease; }
+.btn-coral{ background:var(--coral); color:#fff; }
+.btn-coral:hover{ background:var(--coral-deep); transform:translateY(-1px); box-shadow:0 8px 18px rgba(217,108,79,.3); }
+.btn-outline-coral{ background:transparent; border-color:var(--coral); color:var(--coral-deep); }
+.btn-outline-coral:hover{ background:var(--coral); color:#fff; }
+.btn-outline-light{ background:rgba(255,255,255,.95); border-color:rgba(255,255,255,.95); color:var(--coral-deep); }
+.btn-outline-light:hover{ background:#fff; }
+.btn-sm{ padding:9px 16px; font-size:.78rem; border-radius:var(--radius-sm); }
+.btn-block{ width:100%; }
+.btn:active{ transform:scale(.97); }
+
+/* Minimal CSS-only icons */
+.icon-search{ position:relative; width:16px; height:16px; display:inline-block; }
+.icon-search::before{ content:''; position:absolute; top:0; left:0; width:11px; height:11px; border:1.8px solid currentColor; border-radius:50%; }
+.icon-search::after{ content:''; position:absolute; bottom:0; right:0; width:6px; height:1.8px; background:currentColor; transform:rotate(45deg); transform-origin:right; }
+.icon-bookmark{ position:relative; width:14px; height:17px; display:inline-block; }
+.icon-bookmark::before{ content:''; position:absolute; top:0; left:0; width:14px; height:17px; border:1.8px solid currentColor; border-bottom:none; clip-path:polygon(0 0,100% 0,100% 100%,50% 75%,0 100%); }
+.icon-arrow{ display:inline-block; width:9px; height:9px; border-top:1.8px solid currentColor; border-right:1.8px solid currentColor; transform:rotate(45deg); }
+.icon-mail-env{ width:44px; height:34px; border:1.8px solid var(--coral-deep); border-radius:4px; position:relative; flex-shrink:0; margin-top:4px; background:#fff; }
+.icon-mail-env::before{ content:''; position:absolute; top:-1px; left:-1px; width:0; height:0; border-left:22px solid transparent; border-right:22px solid transparent; border-top:14px solid var(--coral-deep); }
+.badge-count{ position:absolute; top:-6px; right:-8px; background:var(--mustard-deep); color:#fff; font-size:.62rem; font-weight:700; min-width:16px; height:16px; border-radius:50%; display:flex; align-items:center; justify-content:center; padding:0 3px; }
+
+/* Announcement bar */
+.announce-bar{ background:var(--ink); color:#F3E9D8; font-size:.8rem; font-weight:600; }
+.announce-inner{ display:flex; justify-content:space-between; align-items:center; padding:9px 0; gap:16px; }
+.announce-inner .announce-links{ display:flex; gap:16px; flex-shrink:0; }
+.announce-inner .announce-links a{ color:#E3D9C8; text-decoration:none; }
+.announce-inner .announce-links a:hover{ color:#fff; }
+.announce-msg{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+@media (max-width:760px){ .announce-links{ display:none !important; } }
+
+/* Header */
+.site-header{ position:sticky; top:0; z-index:100; background:#fff; border-bottom:1px solid var(--line); }
+.header-top{ border-bottom:1px solid var(--line); }
+.header-top-inner{ display:flex; align-items:center; gap:24px; height:82px; }
+.logo{ display:flex; align-items:center; gap:9px; text-decoration:none; flex-shrink:0; }
+.logo-mark{ width:30px; height:30px; position:relative; flex-shrink:0; border-radius:50%; background:var(--coral); }
+.logo-mark::before{ content:''; position:absolute; top:8px; left:8px; width:14px; height:14px; border:1.8px solid #fff; border-radius:2px; transform:rotate(20deg); }
+.logo-text{ line-height:1.1; }
+.logo-word{ font-family:var(--font-display); font-weight:700; font-size:1.5rem; color:var(--ink); white-space:nowrap; }
+.logo-tag{ font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-mute); display:block; margin-top:1px; font-weight:700; }
+.header-search{ flex:1; display:flex; max-width:560px; }
+.header-search input{ flex:1; padding:13px 18px; border:1.5px solid var(--line); border-right:none; border-radius:var(--radius-pill) 0 0 var(--radius-pill); font-family:inherit; font-size:.92rem; background:var(--cream); }
+.header-search button{ background:var(--coral); color:#fff; border:none; padding:0 22px; border-radius:0 var(--radius-pill) var(--radius-pill) 0; cursor:pointer; display:flex; align-items:center; }
+.header-actions{ display:flex; align-items:center; gap:20px; flex-shrink:0; }
+.header-action-btn{ background:none; border:none; display:flex; flex-direction:column; align-items:center; gap:3px; cursor:pointer; color:var(--ink-soft); font-size:.68rem; font-weight:600; position:relative; padding:4px; text-decoration:none; }
+.header-action-btn:hover{ color:var(--coral-deep); }
+.header-nav-row{ background:#fff; }
+.header-nav-inner{ display:flex; align-items:center; gap:22px; height:52px; overflow-x:auto; }
+.header-nav-inner a{ color:var(--ink-soft); text-decoration:none; font-size:.86rem; font-weight:600; white-space:nowrap; padding:6px 1px; border-bottom:2px solid transparent; }
+.header-nav-inner a:hover{ color:var(--coral-deep); }
+.header-nav-inner a.active{ color:var(--coral-deep); border-bottom-color:var(--mustard); }
+.menu-toggle{ display:none; background:none; border:1px solid var(--line); border-radius:8px; width:42px; height:42px; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0; }
+.menu-toggle span{ display:block; width:18px; height:1.8px; background:var(--ink); position:relative; }
+.menu-toggle span::before,.menu-toggle span::after{ content:''; position:absolute; left:0; width:18px; height:1.8px; background:var(--ink); }
+.menu-toggle span::before{ top:-6px; } .menu-toggle span::after{ top:6px; }
+@media (max-width:940px){
+  .header-search{ display:none; }
+  .header-nav-inner{ display:none; position:absolute; top:100%; left:0; right:0; background:#fff; border-bottom:1px solid var(--line);
+    flex-direction:column; align-items:flex-start; gap:2px; padding:12px 24px 20px; max-height:70vh; overflow-y:auto; height:auto; }
+  .header-nav-inner.open{ display:flex; }
+  .header-nav-inner a{ width:100%; padding:12px 0; border-bottom:1px solid var(--line); }
+  .menu-toggle{ display:flex; }
+  .header-nav-row{ position:relative; }
+}
+@media (max-width:640px){ .logo-tag{ display:none; } }
+
+.mobile-search-wrap{ display:none; padding:12px 0; border-bottom:1px solid var(--line); }
+@media (max-width:940px){ .mobile-search-wrap{ display:block; } }
+.mobile-search-inner{ display:flex; }
+.mobile-search-inner input{ flex:1; padding:12px 16px; border:1.5px solid var(--line); border-right:none; border-radius:var(--radius-pill) 0 0 var(--radius-pill); font-family:inherit; background:var(--cream); }
+.mobile-search-inner button{ background:var(--coral); color:#fff; border:none; padding:0 18px; border-radius:0 var(--radius-pill) var(--radius-pill) 0; }
+
+/* Hero */
+.hero{ background:var(--cream); position:relative; overflow:hidden; }
+.hero-grid{ display:grid; grid-template-columns:.9fr 1.1fr; gap:0; align-items:stretch; }
+.hero-copy{ padding:56px 46px 46px 0; display:flex; flex-direction:column; justify-content:center; }
+.hero-copy h1{ font-size:clamp(2.5rem,4.6vw,3.6rem); color:var(--ink); margin-bottom:16px; }
+.hero-copy h1 .script-line{ display:block; font-family:var(--font-script); font-weight:700; color:var(--coral-deep); font-size:1.05em; line-height:1; margin-top:4px; }
+.hero-lede{ color:var(--ink-soft); font-size:1.02rem; max-width:42ch; margin-bottom:26px; }
+.hero-ctas{ margin-bottom:28px; display:flex; gap:12px; flex-wrap:wrap; }
+.hero-stats-row{ display:flex; gap:26px; flex-wrap:wrap; }
+.hero-stat{ display:flex; flex-direction:column; }
+.hero-stat strong{ font-family:var(--font-display); font-size:1.4rem; color:var(--ink); }
+.hero-stat span{ font-size:.74rem; color:var(--ink-mute); text-transform:uppercase; letter-spacing:.06em; font-weight:700; }
+.hero-visual{ position:relative; min-height:460px; }
+.hero-visual .ph-wrap{ position:absolute; inset:0; overflow:hidden; }
+.hero-script-note{ position:absolute; top:28px; right:34px; text-align:right; z-index:2; }
+@media (max-width:980px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .hero-copy{ padding:38px 24px; order:2; }
+  .hero-visual{ order:1; min-height:320px; }
+  .hero-script-note{ display:none; }
+}
+
+/* Category strip */
+.cat-strip{ padding:44px 0; }
+.cat-grid-row{ display:flex; gap:26px; overflow-x:auto; padding-bottom:6px; }
+.cat-item{ display:flex; flex-direction:column; align-items:center; gap:10px; text-decoration:none; color:var(--ink-soft); font-size:.78rem; font-weight:600; text-align:center; flex-shrink:0; width:100px; }
+.cat-item:hover{ color:var(--coral-deep); }
+.cat-thumb{ width:78px; height:78px; border-radius:50%; overflow:hidden; border:2px solid var(--line); background:var(--cream-deep); transition:border-color .15s ease, transform .2s ease; }
+.cat-item:hover .cat-thumb{ border-color:var(--mustard); transform:translateY(-3px) scale(1.03); }
+
+/* Sections */
+.section{ padding:70px 0; }
+.section-alt{ background:var(--cream); }
+.section-head-row{ display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:34px; }
+.section-head-row h2{ font-size:clamp(1.7rem,3vw,2.2rem); color:var(--ink); }
+.section-desc{ color:var(--ink-soft); font-size:.98rem; margin:4px 0 0; }
+.view-all{ color:var(--coral-deep); font-weight:700; text-decoration:none; font-size:.85rem; white-space:nowrap; }
+.view-all:hover{ text-decoration:underline; }
+
+/* Featured posts */
+.featured-grid{ display:grid; grid-template-columns:1.4fr 1fr; gap:22px; }
+@media (max-width:900px){ .featured-grid{ grid-template-columns:1fr; } }
+.featured-main{ position:relative; border-radius:var(--radius); overflow:hidden; min-height:400px; display:flex; align-items:flex-end; text-decoration:none; color:#fff; }
+.featured-main .ph-wrap{ position:absolute; inset:0; }
+.featured-main::after{ content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(44,38,34,.85) 0%, rgba(44,38,34,.1) 60%); }
+.featured-main-body{ position:relative; z-index:1; padding:34px; }
+.featured-main-body .article-tag{ position:static; display:inline-block; margin-bottom:14px; }
+.featured-main-body h3{ color:#fff; font-size:1.6rem; margin-bottom:10px; }
+.featured-main-body p{ color:#E9DFD2; margin-bottom:0; }
+.featured-side{ display:flex; flex-direction:column; gap:18px; }
+.featured-side-item{ display:flex; gap:14px; text-decoration:none; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:12px; align-items:center; transition:box-shadow .18s ease, transform .18s ease; }
+.featured-side-item:hover{ box-shadow:var(--shadow-card-hover); transform:translateY(-2px); }
+.featured-side-thumb{ width:76px; height:76px; border-radius:var(--radius-sm); overflow:hidden; flex-shrink:0; background:var(--cream-deep); }
+.featured-side-copy h4{ font-size:.92rem; margin-bottom:4px; line-height:1.3; font-family:var(--font-body); font-weight:700; }
+.featured-side-copy span{ font-size:.72rem; color:var(--ink-mute); }
+
+/* Article cards */
+.article-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+@media (max-width:1000px){ .article-grid{ grid-template-columns:1fr 1fr; } }
+@media (max-width:560px){ .article-grid{ grid-template-columns:1fr; } }
+.article-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; text-decoration:none; color:var(--ink); box-shadow:var(--shadow-card); transition:box-shadow .18s ease, transform .18s ease; display:flex; flex-direction:column; position:relative; }
+.article-card:hover{ box-shadow:var(--shadow-card-hover); transform:translateY(-3px); }
+.article-card .ph-wrap{ aspect-ratio:4/3; overflow:hidden; position:relative; }
+.article-card .ph-wrap img{ transition:transform .4s ease; }
+.article-card:hover .ph-wrap img{ transform:scale(1.06); }
+.article-tag{ position:absolute; top:12px; left:12px; z-index:1; background:var(--ink); color:#fff; font-size:.62rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:4px 10px; border-radius:var(--radius-sm); }
+.article-bookmark{ position:absolute; top:8px; right:8px; z-index:2; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,.92); border:none; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--ink-soft); transition:transform .15s ease, color .15s ease; }
+.article-bookmark:hover{ color:var(--coral-deep); transform:scale(1.1); }
+.article-bookmark.active{ color:var(--coral-deep); }
+.article-bookmark.active .icon-bookmark::before{ background:var(--coral-deep); border-color:var(--coral-deep); }
+.article-card h3{ font-size:1rem; padding:14px 16px 0; line-height:1.32; font-family:var(--font-body); font-weight:700; }
+.article-card .excerpt{ padding:6px 16px 0; color:var(--ink-soft); font-size:.85rem; flex:1; }
+.article-meta-row{ display:flex; flex-direction:column; gap:2px; padding:14px 16px 10px; font-size:.72rem; color:var(--ink-mute); }
+.article-meta-row .author-name{ font-weight:700; color:var(--ink); }
+.article-readmore{ padding:0 16px 16px; font-size:.82rem; font-weight:700; color:var(--coral-deep); }
+.chip-row{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:34px; }
+.chip{ padding:9px 17px; border-radius:var(--radius-pill); border:1px solid var(--line); background:transparent; color:var(--ink-soft); font-size:.83rem; cursor:pointer; font-family:inherit; font-weight:600; }
+.chip:hover{ border-color:var(--coral-deep); color:var(--coral-deep); }
+.chip.active{ background:var(--ink); color:#fff; border-color:var(--ink); }
+.empty-note{ color:var(--ink-mute); }
+
+/* Newsletter card */
+.newsletter-card{ background:var(--cream-deep); border-radius:var(--radius); padding:32px; display:flex; gap:20px; align-items:flex-start; position:relative; overflow:hidden; }
+.newsletter-card h3{ font-size:1.2rem; margin-bottom:6px; color:var(--ink); }
+.newsletter-card > div > p{ color:var(--ink-soft); font-size:.88rem; margin-bottom:14px; }
+.newsletter-form-row{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+.newsletter-form-row input{ flex:1; min-width:200px; padding:12px 15px; border-radius:var(--radius-sm); border:1px solid var(--line); font-family:inherit; background:#fff; }
+.newsletter-consent{ display:flex; align-items:flex-start; gap:8px; font-size:.76rem; color:var(--ink-mute); }
+.newsletter-consent input{ margin-top:3px; }
+.newsletter-consent a{ color:var(--coral-deep); }
+.newsletter-success{ color:var(--success); font-size:.92rem; font-weight:700; }
+.newsletter-script{ position:absolute; right:6%; bottom:8%; text-align:right; }
+@media (max-width:700px){ .newsletter-script{ display:none; } }
+.field-error{ color:#C1543A; font-size:.8rem; margin-top:6px; display:none; }
+
+/* Contact / forms */
+.field{ margin-bottom:18px; }
+.field label{ display:block; font-size:.84rem; margin-bottom:7px; color:var(--ink-soft); font-weight:600; }
+.field input, .field textarea, .field select{ width:100%; padding:13px 15px; background:#fff; border:1px solid var(--line); border-radius:var(--radius-sm); color:var(--ink); font-family:inherit; font-size:.95rem; }
+.field textarea{ resize:vertical; min-height:110px; }
+.field.has-error input, .field.has-error textarea{ border-color:#C1543A; }
+.field.has-error .field-error{ display:block; }
+.form-success{ background:var(--cream); border:1px solid var(--success); border-radius:var(--radius); padding:26px; }
+.form-success h3{ margin-bottom:8px; color:var(--coral-deep); }
+
+/* FAQ */
+.faq-list details{ border-top:1px solid var(--line); padding:18px 0; }
+.faq-list details:last-child{ border-bottom:1px solid var(--line); }
+.faq-list summary{ cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:20px; font-weight:700; font-size:1rem; list-style:none; }
+.faq-list summary::-webkit-details-marker{ display:none; }
+.faq-marker{ font-size:1.3rem; color:var(--coral-deep); flex-shrink:0; font-weight:400; transition:transform .2s ease; }
+.faq-list details[open] .faq-marker{ transform:rotate(180deg); }
+.faq-list details[open] .faq-marker::before{ content:'\2212'; }
+.faq-marker::before{ content:'+'; }
+.faq-answer{ padding-top:12px; color:var(--ink-soft); line-height:1.65; max-width:70ch; }
+
+/* Page header / breadcrumbs */
+.page-header{ padding:44px 0 34px; background:var(--cream); border-bottom:1px solid var(--line); }
+.page-header h1{ font-size:clamp(1.9rem,3.6vw,2.5rem); color:var(--ink); }
+.page-header p{ color:var(--ink-soft); max-width:64ch; margin:0; }
+.breadcrumbs{ font-size:.82rem; color:var(--ink-mute); margin-bottom:14px; }
+.breadcrumbs a{ color:var(--ink-soft); text-decoration:none; }
+.breadcrumbs a:hover{ color:var(--coral-deep); }
+
+/* Article detail */
+.detail-hero{ position:relative; overflow:hidden; min-height:320px; display:flex; align-items:flex-end; }
+.detail-hero .ph-wrap{ position:absolute; inset:0; }
+.detail-hero::after{ content:''; position:absolute; inset:0; background:linear-gradient(0deg, rgba(44,38,34,.88) 0%, rgba(44,38,34,.15) 60%); }
+.detail-hero-content{ position:relative; z-index:1; color:#fff; padding:40px 0; width:100%; }
+.detail-hero-content .breadcrumbs a{ color:#D9CDBC; }
+.detail-hero-content .breadcrumbs span{ color:#fff; }
+.detail-hero-content h1{ color:#fff; font-size:clamp(1.9rem,3.6vw,2.5rem); margin-bottom:8px; }
+.detail-meta{ display:flex; gap:12px; flex-wrap:wrap; color:#D9CDBC; font-size:.84rem; align-items:center; }
+.detail-bookmark-btn{ margin-left:auto; }
+.article-body{ max-width:720px; }
+.article-body p{ color:var(--ink-soft); font-size:1.04rem; line-height:1.8; }
+.article-body h2{ font-size:1.35rem; margin:34px 0 14px; color:var(--ink); }
+.article-body ul, .article-body ol{ margin:0 0 22px; padding-left:22px; }
+.article-body ul li{ color:var(--ink-soft); font-size:1rem; line-height:1.72; margin-bottom:8px; list-style:disc; }
+.article-body ol li{ color:var(--ink-soft); font-size:1rem; line-height:1.72; margin-bottom:12px; list-style:decimal; padding-left:4px; }
+.author-box{ display:flex; gap:16px; align-items:flex-start; background:var(--cream); border:1px solid var(--line); border-radius:var(--radius); padding:20px; margin-top:36px; max-width:720px; }
+.author-avatar{ width:48px; height:48px; border-radius:50%; background:var(--coral); flex-shrink:0; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:var(--font-display); color:#fff; }
+.author-box h4{ margin-bottom:2px; font-size:.98rem; }
+.author-role{ font-size:.78rem; color:var(--mustard-deep); font-weight:700; margin-bottom:6px; }
+.author-box p{ margin:0; font-size:.88rem; color:var(--ink-soft); }
+.related-heading{ font-size:1.35rem; margin:48px 0 20px; color:var(--ink); }
+
+/* Saved page */
+.empty-state{ text-align:center; padding:60px 20px; }
+.empty-state h3{ color:var(--ink); margin-bottom:8px; }
+.empty-state p{ color:var(--ink-soft); margin-bottom:20px; }
+
+/* Team / about */
+.team-grid{ display:grid; grid-template-columns:repeat(5,1fr); gap:18px; }
+@media (max-width:980px){ .team-grid{ grid-template-columns:1fr 1fr 1fr; } }
+@media (max-width:640px){ .team-grid{ grid-template-columns:1fr 1fr; } }
+.team-card{ background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px; box-shadow:var(--shadow-card); }
+.team-avatar{ width:44px; height:44px; border-radius:50%; background:var(--coral); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:var(--font-display); margin-bottom:14px; }
+.team-card h4{ margin-bottom:2px; font-size:.96rem; }
+.team-role{ font-size:.76rem; color:var(--mustard-deep); font-weight:700; margin-bottom:10px; }
+.team-card p{ color:var(--ink-soft); font-size:.86rem; margin:0; }
+
+/* Legal pages */
+.legal-content{ max-width:760px; margin:0 auto; padding:56px 24px 92px; }
+.legal-content h2{ font-size:1.28rem; margin-top:32px; margin-bottom:12px; color:var(--ink); }
+.legal-content h2:first-of-type{ margin-top:0; }
+.legal-content p{ color:var(--ink-soft); line-height:1.75; margin-bottom:14px; }
+.legal-content ul{ padding-left:20px; margin-bottom:14px; }
+.legal-content li{ color:var(--ink-soft); line-height:1.7; margin-bottom:8px; list-style:disc; }
+
+/* Notfound */
+.notfound{ padding:110px 0; text-align:center; }
+.notfound h1{ font-size:clamp(2.1rem,4.6vw,3rem); margin-bottom:14px; color:var(--ink); }
+.notfound p{ color:var(--ink-soft); margin-bottom:26px; }
+
+/* Search */
+.search-summary{ color:var(--ink-soft); margin-bottom:26px; }
+
+/* Footer */
+.site-footer{ background:var(--ink); border-top:1px solid var(--line-dark); padding:56px 0 26px; color:#C9BFAF; }
+.footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:28px; margin-bottom:36px; }
+@media (max-width:980px){ .footer-grid{ grid-template-columns:1fr 1fr; } }
+.footer-brand .logo-word{ color:#fff; }
+.footer-brand .logo-tag{ color:#948B7C; }
+.footer-brand p{ color:#948B7C; font-size:.87rem; max-width:34ch; margin-top:14px; }
+.footer-social{ display:flex; gap:14px; margin-top:16px; flex-wrap:wrap; }
+.footer-social a{ color:#948B7C; text-decoration:none; font-size:.78rem; font-weight:600; }
+.footer-social a:hover{ color:#fff; }
+.footer-col h5{ text-transform:uppercase; letter-spacing:.1em; font-size:.7rem; color:#948B7C; margin-bottom:16px; }
+.footer-col ul li{ margin-bottom:10px; }
+.footer-col a{ color:#D4CBBC; text-decoration:none; font-size:.85rem; }
+.footer-col a:hover{ color:#fff; }
+.footer-bottom{ border-top:1px solid rgba(255,255,255,.1); padding-top:20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; color:#7A7166; font-size:.78rem; }
+
+.text-center{ text-align:center; }
+
+/* Policy Notice popup */
+.policy-notice-overlay{ position:fixed; inset:0; z-index:2147483647; background:rgba(4,6,14,.94); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px); display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; visibility:hidden; transition:opacity .25s ease, visibility 0s linear .25s; }
+.policy-notice-overlay.open{ opacity:1; visibility:visible; transition:opacity .25s ease, visibility 0s linear 0s; }
+.policy-notice-overlay.open .policy-notice-modal{ animation:policyNoticeFadeInUp .35s ease-out; }
+@keyframes policyNoticeFadeInUp{ from{ opacity:0; transform:translateY(18px); } to{ opacity:1; transform:translateY(0); } }
+.policy-notice-modal{ background:#131a30; border:1px solid rgba(255,255,255,.08); border-radius:22px; width:100%; max-width:480px; padding:38px 38px 34px; box-shadow:0 30px 70px rgba(0,0,0,.55); cursor:pointer; }
+.policy-notice-modal h2{ color:#fff; font-size:1.65rem; font-weight:700; margin:0 0 18px; line-height:1.25; }
+.policy-notice-modal p{ color:#a7aec4; font-size:1rem; line-height:1.65; margin:0 0 28px; }
+.policy-notice-actions{ display:flex; gap:14px; flex-wrap:wrap; }
+.policy-notice-btn{ flex:1; min-width:150px; border:none; border-radius:12px; padding:15px 22px; font-size:.98rem; font-weight:600; cursor:pointer; transition:filter .15s ease, transform .15s ease; font-family:inherit; }
+.policy-notice-btn:hover{ filter:brightness(1.1); }
+.policy-notice-btn:active{ transform:scale(.98); }
+.policy-notice-btn-accept{ background:linear-gradient(135deg,#5b7dfa,#8f5cf0); color:#fff; }
+.policy-notice-btn-close{ background:rgba(255,255,255,.05); color:#e8eaf3; border:1px solid rgba(255,255,255,.16); }
+@media (max-width:480px){ .policy-notice-modal{ padding:30px 24px 26px; } .policy-notice-btn{ min-width:120px; } }
+</style>
+</head>
+<body>
+
+<div class="announce-bar">
+  <div class="container announce-inner">
+    <span class="announce-msg">New tutorials every week &nbsp;|&nbsp; Simple ideas for makers of every skill level</span>
+    <span class="announce-links">
+      <a href="/about" data-link>About</a>
+      <a href="/contact" data-link>Contact</a>
+    </span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="container header-top-inner">
+      <a href="/" data-link class="logo" aria-label="Craftly home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text"><span class="logo-word">Craftly</span><span class="logo-tag">Ideas Worth Making</span></span>
+      </a>
+      <form class="header-search" id="headerSearchForm" role="search">
+        <label for="headerSearchInput" class="sr-only">Search tutorials and craft ideas</label>
+        <input type="text" id="headerSearchInput" placeholder="Search tutorials, projects, and ideas&hellip;">
+        <button type="submit" aria-label="Search"><span class="icon-search" aria-hidden="true" style="color:#fff;"></span></button>
+      </form>
+      <div class="header-actions">
+        <a href="/saved" data-link class="header-action-btn"><span class="icon-bookmark" aria-hidden="true"></span>Saved<span class="badge-count" id="savedBadge" style="display:none;">0</span></a>
+        <button type="button" class="btn btn-coral btn-sm" id="headerSubscribeBtn">Subscribe</button>
+      </div>
+    </div>
+    <div class="container mobile-search-wrap">
+      <form class="mobile-search-inner" id="mobileSearchForm">
+        <label for="mobileSearchInput" class="sr-only">Search</label>
+        <input type="text" id="mobileSearchInput" placeholder="Search tutorials, projects&hellip;">
+        <button type="submit" aria-label="Search"><span class="icon-search" aria-hidden="true"></span></button>
+      </form>
+    </div>
+  </div>
+  <div class="header-nav-row">
+    <div class="container" style="display:flex;align-items:center;gap:14px;">
+      <nav class="header-nav-inner" id="mainNav">
+        <a href="/" data-link data-path="/">Home</a>
+        <a href="/painting-art" data-link data-path="/painting-art">Painting &amp; Art</a>
+        <a href="/paper-crafts" data-link data-path="/paper-crafts">Paper Crafts</a>
+        <a href="/sewing-fiber-arts" data-link data-path="/sewing-fiber-arts">Sewing &amp; Fiber Arts</a>
+        <a href="/home-diy" data-link data-path="/home-diy">Home DIY</a>
+        <a href="/upcycling" data-link data-path="/upcycling">Upcycling</a>
+        <a href="/kids-crafts" data-link data-path="/kids-crafts">Kids Crafts</a>
+        <a href="/seasonal" data-link data-path="/seasonal">Seasonal</a>
+        <a href="/about" data-link data-path="/about">About</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mainNav" style="margin-left:auto;"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main id="app"></main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" data-link class="logo" aria-label="Craftly home">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="logo-text"><span class="logo-word">Craftly</span><span class="logo-tag">Ideas Worth Making</span></span>
+        </a>
+        <p>Simple, creative tutorials for painting, paper crafts, sewing, home DIY and more. Make something today.</p>
+        <div class="footer-social">
+          <a href="#" onclick="return false;">Instagram</a>
+          <a href="#" onclick="return false;">Pinterest</a>
+          <a href="#" onclick="return false;">YouTube</a>
+          <a href="#" onclick="return false;">Facebook</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Categories</h5>
+        <ul>
+          <li><a href="/painting-art" data-link>Painting &amp; Art</a></li>
+          <li><a href="/paper-crafts" data-link>Paper Crafts</a></li>
+          <li><a href="/sewing-fiber-arts" data-link>Sewing &amp; Fiber Arts</a></li>
+          <li><a href="/home-diy" data-link>Home DIY</a></li>
+          <li><a href="/upcycling" data-link>Upcycling</a></li>
+          <li><a href="/kids-crafts" data-link>Kids Crafts</a></li>
+          <li><a href="/seasonal" data-link>Seasonal</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="/about" data-link>About Us</a></li>
+          <li><a href="/contact" data-link>Contact</a></li>
+          <li><a href="/faq" data-link>FAQs</a></li>
+          <li><a href="/saved" data-link>Saved Posts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/privacy-policy" data-link>Privacy Policy</a></li>
+          <li><a href="/terms-of-use" data-link>Terms of Use</a></li>
+          <li><a href="/cookie-policy" data-link>Cookie Policy</a></li>
+          <li><a href="/disclaimer" data-link>Disclaimer</a></li>
+          <li><a href="/affiliate-disclosure" data-link>Affiliate Disclosure</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Craftly. All rights reserved.</span>
+      <span><a href="/terms-of-use" data-link style="color:#948B7C;">Terms of Use</a> &middot; <a href="/privacy-policy" data-link style="color:#948B7C;">Privacy Policy</a> &middot; <a href="/cookie-policy" data-link style="color:#948B7C;">Cookie Policy</a></span>
+    </div>
+  </div>
+</footer>
+
+<div class="policy-notice-overlay" id="policyNoticeOverlay" role="dialog" aria-modal="true" aria-labelledby="policyNoticeTitle" aria-describedby="policyNoticeDesc">
+  <div class="policy-notice-modal">
+    <h2 id="policyNoticeTitle">Policy Notice</h2>
+    <p id="policyNoticeDesc">Are you accepting our policy to play the game? This notice is informational and does not block access.</p>
+    <div class="policy-notice-actions">
+      <button type="button" class="policy-notice-btn policy-notice-btn-accept" id="policyNoticeAcceptBtn">Yes, Accept</button>
+      <button type="button" class="policy-notice-btn policy-notice-btn-close" id="policyNoticeCloseBtn">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+SPA FALLBACK CONFIGURATION (History API routing, not hash routing)
+
+Netlify — `_redirects` file: /*    /index.html   200
+Vercel — `vercel.json`: { "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }] }
+DigitalOcean App Platform — static site component: catchall_document: index.html
+Apache — `.htaccess`:
+  <IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.html [L]
+  </IfModule>
+Nginx — server block: location / { try_files $uri $uri/ /index.html; }
+============================================================ -->
+
+<script>
+(function(){
+"use strict";
+
+var BASE_URL = "https://craftly.blog";
+
+/* ============ PHOTOGRAPHY ============
+   Curated, verified-free-license Unsplash photography (Unsplash License:
+   free for commercial use, no attribution required), reused across
+   placements at different crops, unified by one consistent color grade
+   (see .ph in <style>). */
+
+var PHOTO = {
+  paint:  "1520856990214-7a9e59dd5ff7",
+  thread: "1542044801-30d3e45ae49a",
+  tools:  "1685320198649-781e83a61de4"
+};
+
+function photoUrl(key, w, h){
+  var id = PHOTO[key] || PHOTO.paint;
+  return "https://images.unsplash.com/photo-" + id + "?q=80&w=" + w + (h ? "&h=" + h : "") + "&auto=format&fit=crop&crop=entropy";
+}
+function photoTag(key, w, h, alt){
+  return '<img class="ph" src="' + photoUrl(key, w, h) + '" alt="' + escapeHtml(alt) + '" loading="lazy" decoding="async">';
+}
+
+/* ============ DATA ============ */
+
+var AUTHORS = {
+  maya:   { name:"Maya Lin", role:"Painting & Art Editor", bio:"Maya writes about painting techniques and art fundamentals, focused on making different mediums approachable for beginners." },
+  sophie: { name:"Sophie Adler", role:"Paper Crafts Writer", bio:"Sophie covers paper crafts and card making, with a focus on simple projects that still feel polished and personal." },
+  priya:  { name:"Priya Desai", role:"Sewing & Fiber Arts Writer", bio:"Priya writes about sewing and hand embroidery, helping readers build fiber craft skills one small project at a time." },
+  jake:   { name:"Jake Wilson", role:"Home DIY & Upcycling Writer", bio:"Jake covers home DIY and upcycling projects, focused on practical builds using tools and materials most people already have." },
+  emma:   { name:"Emma Clarke", role:"Kids & Seasonal Crafts Writer", bio:"Emma writes about kids crafts and seasonal projects, drawing on years of testing ideas with her own family." }
+};
+
+var CATEGORY_META = {
+  "painting-art":       { title:"Painting & Art", intro:"Techniques and tutorials for acrylics, watercolor and more." },
+  "paper-crafts":       { title:"Paper Crafts", intro:"Cards, origami and paper projects for every occasion." },
+  "sewing-fiber-arts":  { title:"Sewing & Fiber Arts", intro:"Sewing, embroidery and fiber craft tutorials for beginners." },
+  "home-diy":           { title:"Home DIY", intro:"Practical builds and projects to improve your space." },
+  "upcycling":          { title:"Upcycling", intro:"Creative ways to give old items new purpose." },
+  "kids-crafts":        { title:"Kids Crafts", intro:"Simple, low-mess craft ideas for kids of all ages." },
+  "seasonal":           { title:"Seasonal", intro:"Handmade ideas for holidays and seasonal celebrations." }
+};
+
+var CAT_STRIP = [
+  { label:"Painting & Art", photo:"paint", link:"/painting-art" },
+  { label:"Paper Crafts", photo:"thread", link:"/paper-crafts" },
+  { label:"Sewing & Fiber Arts", photo:"thread", link:"/sewing-fiber-arts" },
+  { label:"Home DIY", photo:"tools", link:"/home-diy" },
+  { label:"Upcycling", photo:"tools", link:"/upcycling" },
+  { label:"Kids Crafts", photo:"thread", link:"/kids-crafts" },
+  { label:"Seasonal", photo:"paint", link:"/seasonal" }
+];
+
+var ARTICLES = [
+  { slug:"beginners-guide-acrylic-pouring-art", category:"Painting & Art", categoryRoute:"painting-art", photo:"paint", readTime:"8 min read", date:"2026-08-14", author:"maya",
+    title:"A Beginner's Guide to Acrylic Pouring Art", excerpt:"Learn the basics of acrylic pouring and create your first abstract canvas.",
+    body:[
+      {t:"p", c:"Acrylic pouring is a mesmerizing technique that creates unique, colorful abstract art with minimal brushwork, making it a great entry point into fluid art."},
+      {t:"h2", c:"What You'll Need"},
+      {t:"ul", c:["Acrylic paints in 3-4 colors","Pouring medium","Canvas or wood panel","Plastic cups for mixing","Silicone oil (optional, for cells)","Gloves and a drop cloth"]},
+      {t:"h2", c:"Steps"},
+      {t:"ol", c:["Mix each paint color with pouring medium until it reaches a smooth, honey-like consistency.","Layer your colors into a single cup in the order you want them to appear.","Add a few drops of silicone oil between layers if you want cell effects.","Pour the mixed paint onto your canvas in a steady, controlled motion.","Tilt the canvas gently to spread the paint and encourage natural patterns.","Let the canvas dry flat for at least 24 to 48 hours without disturbing it."]},
+      {t:"h2", c:"Tips for Better Results"},
+      {t:"p", c:"Working on a level surface and resisting the urge to touch the paint while it dries are the two things that make the biggest difference in how your pour turns out."},
+      {t:"p", c:"Once you're comfortable with a basic pour, try experimenting with different cup techniques like the \"dirty pour\" or \"swipe\" method for more variety."}
+    ]},
+  { slug:"10-easy-watercolor-techniques-beginners", category:"Painting & Art", categoryRoute:"painting-art", photo:"paint", readTime:"6 min read", date:"2026-08-07", author:"maya",
+    title:"10 Easy Watercolor Techniques for Beginners", excerpt:"Simple watercolor techniques to build confidence with your brush.",
+    body:[
+      {t:"p", c:"Watercolor can feel unpredictable at first, but a handful of core techniques cover most of what beginners need to start painting with more control."},
+      {t:"h2", c:"Techniques Worth Practicing First"},
+      {t:"ul", c:["Wet-on-wet for soft, blended backgrounds","Wet-on-dry for crisp, defined edges","Dry brushing for texture and highlights","Salt technique for organic, speckled patterns","Lifting paint with a clean, damp brush for highlights"]},
+      {t:"h2", c:"Building Confidence Gradually"},
+      {t:"p", c:"Practicing each technique on its own, in small swatches, before combining them in a full painting makes it much easier to understand how each one behaves."},
+      {t:"p", c:"Watercolor rewards patience more than any other medium, and confidence really does come from repetition rather than natural talent."}
+    ]},
+  { slug:"how-to-make-handmade-greeting-cards", category:"Paper Crafts", categoryRoute:"paper-crafts", photo:"thread", readTime:"6 min read", date:"2026-08-12", author:"sophie",
+    title:"How to Make Handmade Greeting Cards", excerpt:"Create beautiful, personal greeting cards with basic paper craft supplies.",
+    body:[
+      {t:"h2", c:"What You'll Need"},
+      {t:"ul", c:["Cardstock (base and accent colors)","Scissors and a craft knife","Glue stick or double-sided tape","Decorative paper or washi tape","Stamps or markers for messages","A bone folder (optional, for crisp folds)"]},
+      {t:"h2", c:"Steps"},
+      {t:"ol", c:["Cut and fold your cardstock in half to create the card base.","Cut a slightly smaller piece of accent paper and glue it to the front.","Layer additional decorative elements like paper shapes or washi tape.","Stamp or hand-letter your greeting on the inside or front.","Add any final embellishments like ribbon, buttons, or stickers.","Let any wet glue dry fully before storing or mailing the card."]},
+      {t:"h2", c:"Tips for a Polished Look"},
+      {t:"p", c:"Using a bone folder to crease your folds gives handmade cards a noticeably cleaner, more professional finish than folding by hand alone."},
+      {t:"p", c:"Keep a small stash of blank cards on hand so you're always ready for a birthday, thank-you, or just-because moment."}
+    ]},
+  { slug:"origami-basics-5-simple-folds", category:"Paper Crafts", categoryRoute:"paper-crafts", photo:"thread", readTime:"5 min read", date:"2026-08-01", author:"sophie",
+    title:"Origami Basics: 5 Simple Folds to Start With", excerpt:"Master these foundational origami folds before moving on to complex designs.",
+    body:[
+      {t:"p", c:"Nearly every origami design builds on a small set of foundational folds, which makes learning these five a genuinely efficient way to start."},
+      {t:"h2", c:"The Essential Folds"},
+      {t:"ul", c:["Valley fold, the most basic fold used in almost every design","Mountain fold, the reverse of a valley fold","Squash fold, used to flatten a pocket into a new shape","Petal fold, common in flowers and cranes","Inside reverse fold, used for details like animal heads"]},
+      {t:"h2", c:"Practicing With Simple Projects"},
+      {t:"p", c:"Starting with a classic paper crane or a simple box lets you practice these folds in context rather than in isolation, which helps them stick."},
+      {t:"p", c:"Once these five folds feel natural, most origami tutorials become far easier to follow, since they're really just combinations of the same basic moves."}
+    ]},
+  { slug:"sew-tote-bag-under-an-hour", category:"Sewing & Fiber Arts", categoryRoute:"sewing-fiber-arts", photo:"thread", readTime:"7 min read", date:"2026-07-30", author:"priya",
+    title:"Sew Your Own Tote Bag in Under an Hour", excerpt:"A beginner-friendly sewing project using just a few pieces of fabric.",
+    body:[
+      {t:"h2", c:"What You'll Need"},
+      {t:"ul", c:["1 yard of sturdy cotton fabric","Matching thread","Sewing machine (or needle for hand-sewing)","Fabric scissors","Pins or fabric clips","Iron for pressing seams"]},
+      {t:"h2", c:"Steps"},
+      {t:"ol", c:["Cut two rectangles of fabric for the body and two long strips for the straps.","Pin the two body pieces right sides together and sew along the sides and bottom.","Press the seams open and turn the bag right side out.","Fold and press the strap strips, then sew them into place along the edges.","Fold down the top edge of the bag and sew a hem for a clean finish.","Pin the straps to the inside of the top edge and sew securely in place."]},
+      {t:"h2", c:"Tips for Beginners"},
+      {t:"p", c:"Using a sturdy, mid-weight cotton makes this project much easier for beginners than lightweight or stretchy fabrics, which shift around while sewing."},
+      {t:"p", c:"Once you're comfortable with this basic shape, adding a pocket or a fabric lining is a natural next step."}
+    ]},
+  { slug:"beginners-guide-hand-embroidery", category:"Sewing & Fiber Arts", categoryRoute:"sewing-fiber-arts", photo:"thread", readTime:"6 min read", date:"2026-07-22", author:"priya",
+    title:"A Beginner's Guide to Hand Embroidery", excerpt:"Learn the essential stitches and tools to start hand embroidery.",
+    body:[
+      {t:"p", c:"Hand embroidery only requires a small set of tools and stitches to get started, which makes it one of the most approachable fiber crafts for beginners."},
+      {t:"h2", c:"Essential Tools"},
+      {t:"ul", c:["An embroidery hoop","Embroidery floss in a few colors","A sharp embroidery needle","Fabric (cotton works well for beginners)","A water-soluble fabric marker for tracing designs"]},
+      {t:"h2", c:"Stitches to Learn First"},
+      {t:"p", c:"The backstitch, satin stitch, and French knot together cover the majority of simple embroidery designs, from outlines to filled shapes and small dot details."},
+      {t:"h2", c:"Starting Your First Project"},
+      {t:"p", c:"Tracing a simple design onto fabric and practicing one stitch type per small project builds confidence faster than jumping into a complex, multi-stitch pattern right away."},
+      {t:"p", c:"Hand embroidery is also naturally portable, making it an easy hobby to pick up during downtime or while watching TV in the evening."}
+    ]},
+  { slug:"diy-floating-shelves-any-room", category:"Home DIY", categoryRoute:"home-diy", photo:"tools", readTime:"7 min read", date:"2026-07-25", author:"jake",
+    title:"DIY Floating Shelves for Any Room", excerpt:"Build simple floating shelves with basic tools and materials.",
+    body:[
+      {t:"h2", c:"What You'll Need"},
+      {t:"ul", c:["Wood boards cut to your desired shelf length","Floating shelf brackets","Wood screws","Drill and level","Sandpaper","Wood stain or paint (optional)"]},
+      {t:"h2", c:"Steps"},
+      {t:"ol", c:["Sand and finish your wood boards with stain or paint, then let them dry fully.","Mark your desired shelf height on the wall using a level.","Locate wall studs where possible, or use appropriate wall anchors.","Attach the floating shelf brackets securely to the wall.","Slide the finished wood board onto the mounted brackets.","Check the shelf is level and secure before adding any weight."]},
+      {t:"h2", c:"Safety Tips"},
+      {t:"p", c:"Always confirm what's inside a wall before drilling, and mount into studs whenever possible for shelves that will hold any real weight."},
+      {t:"p", c:"A single floating shelf is a great starter project, and once you're comfortable, building a matching set for a whole wall is a natural next step."}
+    ]},
+  { slug:"10-budget-friendly-diy-home-decor-ideas", category:"Home DIY", categoryRoute:"home-diy", photo:"tools", readTime:"6 min read", date:"2026-07-16", author:"jake",
+    title:"10 Budget-Friendly DIY Home Decor Ideas", excerpt:"Refresh your space without a big budget using these simple projects.",
+    body:[
+      {t:"p", c:"A few small, inexpensive DIY projects can noticeably refresh a room without the cost of a full redecorating budget."},
+      {t:"h2", c:"Easy Places to Start"},
+      {t:"ul", c:["Repaint an old picture frame in a new finish","Create a gallery wall with printed photos or art","Make a no-sew throw pillow cover","Update cabinet hardware for an instant kitchen refresh","Build a simple wood photo ledge for displaying art"]},
+      {t:"h2", c:"Making It Feel Cohesive"},
+      {t:"p", c:"Sticking to a simple, consistent color palette across a few small projects makes budget updates look intentional rather than piecemeal."},
+      {t:"p", c:"Small, low-cost projects done consistently over time often transform a space more noticeably than a single expensive purchase."}
+    ]},
+  { slug:"turn-old-jars-into-planters", category:"Upcycling", categoryRoute:"upcycling", photo:"tools", readTime:"5 min read", date:"2026-07-10", author:"jake",
+    title:"Turn Old Jars Into Beautiful Planters", excerpt:"Give glass jars a second life as charming plant holders.",
+    body:[
+      {t:"h2", c:"What You'll Need"},
+      {t:"ul", c:["Clean glass jars","Acrylic paint or twine (for decorating)","Small pebbles or gravel","Potting soil","Small plants or succulents","Paintbrush (if painting jars)"]},
+      {t:"h2", c:"Steps"},
+      {t:"ol", c:["Clean and dry your jars thoroughly before decorating.","Paint the outside of the jars or wrap them in twine for texture.","Let any paint or glue fully dry before adding soil.","Add a layer of pebbles to the bottom of each jar for drainage.","Fill with potting soil and plant your chosen greenery.","Water lightly and place in a spot with appropriate light for the plant."]},
+      {t:"h2", c:"A Note on Drainage"},
+      {t:"p", c:"Since most jars don't have drainage holes, watering lightly and choosing plants that tolerate slightly damp soil, like pothos, helps prevent root rot."},
+      {t:"p", c:"A row of painted jar planters makes an inexpensive, charming windowsill display using materials you likely already have at home."}
+    ]},
+  { slug:"creative-ways-upcycle-old-tshirts", category:"Upcycling", categoryRoute:"upcycling", photo:"thread", readTime:"5 min read", date:"2026-07-02", author:"jake",
+    title:"Creative Ways to Upcycle Old T-Shirts", excerpt:"Give worn t-shirts new purpose instead of throwing them away.",
+    body:[
+      {t:"p", c:"Old t-shirts are a surprisingly versatile material for upcycling projects, since the fabric is soft, easy to work with, and usually free."},
+      {t:"h2", c:"Simple Upcycling Ideas"},
+      {t:"ul", c:["Cut and braid t-shirt strips into a no-sew tote bag","Turn a favorite tee into a throw pillow cover","Make reusable fabric produce bags for grocery shopping","Braid strips into a simple woven rug","Cut into cleaning rags for an eco-friendly swap"]},
+      {t:"h2", c:"Choosing the Right Shirts"},
+      {t:"p", c:"Soft, well-worn cotton shirts generally work best for upcycling projects, since they're easier to cut and shape than stiffer or synthetic fabrics."},
+      {t:"p", c:"Upcycling old t-shirts is a simple way to reduce fabric waste while creating something genuinely useful for your home."}
+    ]},
+  { slug:"5-easy-rainy-day-crafts-for-kids", category:"Kids Crafts", categoryRoute:"kids-crafts", photo:"thread", readTime:"5 min read", date:"2026-06-24", author:"emma",
+    title:"5 Easy Rainy Day Crafts for Kids", excerpt:"Simple, mess-manageable crafts to keep kids entertained indoors.",
+    body:[
+      {t:"p", c:"Rainy days are much easier with a short list of reliable, low-mess craft ideas that don't require a special trip to the craft store."},
+      {t:"h2", c:"Craft Ideas Worth Keeping on Hand"},
+      {t:"ul", c:["Paper plate animal masks","Handprint art turned into seasonal designs","Simple pom-pom sorting and gluing activities","Painted rock creatures for the garden","Homemade playdough with pantry ingredients"]},
+      {t:"h2", c:"Keeping Cleanup Manageable"},
+      {t:"p", c:"Covering the table with newspaper or a plastic tablecloth beforehand makes cleanup dramatically faster, especially for paint-based projects."},
+      {t:"p", c:"Keeping a small, ready-to-go craft bin stocked with basic supplies means you're never starting from scratch on a rainy afternoon."}
+    ]},
+  { slug:"how-to-make-salt-dough-ornaments", category:"Kids Crafts", categoryRoute:"kids-crafts", photo:"paint", readTime:"6 min read", date:"2026-06-15", author:"emma",
+    title:"How to Make Salt Dough Ornaments", excerpt:"A simple, kid-friendly craft using ingredients from your pantry.",
+    body:[
+      {t:"h2", c:"What You'll Need"},
+      {t:"ul", c:["2 cups all-purpose flour","1 cup salt","1 cup water","Rolling pin","Cookie cutters","Paint and a paintbrush for decorating"]},
+      {t:"h2", c:"Steps"},
+      {t:"ol", c:["Mix the flour and salt together in a large bowl.","Slowly add water, mixing until a smooth, workable dough forms.","Roll the dough out to about 1/4 inch thickness.","Cut shapes using cookie cutters and place on a lined baking sheet.","Bake at a low oven temperature until fully hardened, then let cool completely.","Paint and decorate the cooled ornaments once fully dry."]},
+      {t:"h2", c:"Tips for Success"},
+      {t:"p", c:"Using a straw or skewer to poke a hole near the top of each shape before baking makes it easy to add string for hanging later."},
+      {t:"p", c:"Salt dough ornaments make a lovely handmade keepsake, especially when kids' handprints or initials are pressed into the dough before baking."}
+    ]},
+  { slug:"diy-autumn-wreath-natural-materials", category:"Seasonal", categoryRoute:"seasonal", photo:"paint", readTime:"6 min read", date:"2026-06-08", author:"emma",
+    title:"DIY Autumn Wreath From Natural Materials", excerpt:"Create a seasonal wreath using leaves, twigs, and other natural finds.",
+    body:[
+      {t:"h2", c:"What You'll Need"},
+      {t:"ul", c:["A wire or grapevine wreath base","Dried leaves and small branches","Floral wire","Hot glue gun","Ribbon for a bow","Pinecones or seasonal accents (optional)"]},
+      {t:"h2", c:"Steps"},
+      {t:"ol", c:["Gather a mix of dried leaves, twigs and any seasonal accents you'd like to use.","Arrange your materials around the wreath base to plan the overall look before attaching anything.","Secure larger elements to the base using floral wire.","Fill in gaps with smaller leaves and accents using hot glue.","Attach a ribbon bow to the top or side of the wreath.","Hang in a dry, covered spot to help it last through the season."]},
+      {t:"h2", c:"Choosing Materials"},
+      {t:"p", c:"Slightly dried, rather than fresh, leaves and branches tend to hold their shape and color longer once the wreath is assembled and hung."},
+      {t:"p", c:"A natural wreath made from foraged materials costs very little and captures the season more authentically than most store-bought versions."}
+    ]},
+  { slug:"12-handmade-holiday-gift-ideas", category:"Seasonal", categoryRoute:"seasonal", photo:"thread", readTime:"7 min read", date:"2026-05-30", author:"emma",
+    title:"12 Handmade Holiday Gift Ideas", excerpt:"Thoughtful, handmade gifts for every person on your list.",
+    body:[
+      {t:"p", c:"Handmade gifts often feel more personal than store-bought ones, and many can be made in an afternoon with supplies you already have."},
+      {t:"h2", c:"Gift Ideas Worth Trying"},
+      {t:"ul", c:["Hand-poured candles in reused jars","A hand-embroidered tea towel","A jar of homemade cookie mix with instructions","A small hand-painted plant pot","A photo book of shared memories","A knitted or crocheted scarf"]},
+      {t:"h2", c:"Making Gifts Feel Considered"},
+      {t:"p", c:"Simple, thoughtful packaging, like kraft paper and twine, often does more to make a handmade gift feel special than the complexity of the project itself."},
+      {t:"p", c:"Starting handmade gifts a few weeks ahead of the holidays takes the pressure off and leaves room to enjoy the process."}
+    ]}
+];
+
+var FAQS = [
+  { q:"Do I need expensive supplies to follow your tutorials?", a:"Most of our tutorials are designed around affordable, easy-to-find supplies. Where a specialty item helps, we mention simpler alternatives too." },
+  { q:"Are your projects suitable for complete beginners?", a:"Yes, most posts are written with beginners in mind, and we call out which projects are better suited to more experienced makers." },
+  { q:"Can I share photos of projects I made from your tutorials?", a:"We'd love that! Feel free to tag us on social media \u2014 we regularly feature reader projects." },
+  { q:"How often do you publish new tutorials?", a:"We publish new posts every week across our categories, and subscribers get a heads-up as soon as new ones go live." },
+  { q:"Do you accept guest posts or project submissions?", a:"Yes, reach out through our Contact page with your idea and we'll get back to you." },
+  { q:"Can I request a tutorial on a specific project?", a:"Absolutely \u2014 use our Contact page to send requests, and we do our best to work reader suggestions into our upcoming posts." }
+];
+
+var LEGAL_CONTENT = {
+  privacy: { title:"Privacy Policy", intro:"This Privacy Policy explains what information Craftly collects, how it is used, and the choices available to you as a visitor.",
+    sections:[
+      { h:"Information We Collect", p:["We collect information you provide directly, such as your name and email when you subscribe or contact us, along with technical information like browser type and pages visited."] },
+      { h:"How We Use Your Information", p:["Information is used to respond to messages and, where you've opted in, send newsletter updates with new tutorials and craft ideas."] },
+      { h:"Cookies", p:["We use cookies to support core site functionality such as saved-post persistence, and to understand aggregate traffic patterns. See our Cookie Policy for details."] },
+      { h:"Third-Party Services", p:["We may rely on third-party providers for hosting, email delivery and analytics. These providers only receive the information necessary to perform their function."] },
+      { h:"Data Retention", p:["We retain contact and subscriber data only as long as needed to respond to inquiries and send requested communications."] },
+      { h:"Your Rights", p:["You may request access to, correction of, or deletion of your personal information by contacting us using the details below."] },
+      { h:"Changes to This Policy", p:["We may update this Privacy Policy periodically. Material changes will be reflected by an updated revision date at the top of this page."] },
+      { h:"Contact Information", p:["Questions about this Privacy Policy can be sent to hello@craftly.blog."] }
+    ]},
+  cookies: { title:"Cookie Policy", intro:"This Cookie Policy explains the types of cookies Craftly uses and how you can manage your preferences.",
+    sections:[
+      { h:"Necessary Cookies", p:["These cookies support core functionality, including keeping your saved posts between visits, and the site cannot function properly without them."] },
+      { h:"Analytics Cookies", p:["Analytics cookies help us understand which posts and categories readers find most useful, which informs future content." ] },
+      { h:"Preference Cookies", p:["Preference cookies remember choices you make on the site, such as previously viewed categories, to make future visits more convenient."] },
+      { h:"Advertising Cookies", p:["Where advertising is present, advertising cookies may be used by third-party networks to serve ads relevant to your interests."] },
+      { h:"Managing Cookies", p:["Most browsers allow you to block or delete cookies through their settings. Blocking necessary cookies may affect saved-post functionality."] }
+    ]},
+  disclaimer: { title:"Disclaimer", intro:"The information on Craftly is provided for general informational purposes related to arts, crafts and DIY projects.",
+    sections:[
+      { h:"Project Results May Vary", p:["Results depend on materials, tools and individual skill level. Steps and timings reflect our own testing conditions and may vary for your specific project."] },
+      { h:"Safety First", p:["Some projects involve tools, adhesives, heat, or small parts. Always follow manufacturer safety guidance and supervise children during craft activities."] },
+      { h:"Not Professional Advice", p:["Content on this site is intended for general craft and hobby guidance, not as professional construction, electrical, or safety advice."] },
+      { h:"External Links", p:["Our site may link to external resources or supplies for convenience. We are not responsible for the content, accuracy, or practices of external websites."] }
+    ]},
+  termsUse: { title:"Terms of Use", intro:"These Terms of Use govern your access to and use of the Craftly website.",
+    sections:[
+      { h:"Acceptance of Terms", p:["By accessing or using Craftly, you agree to be bound by these Terms of Use. If you do not agree, please discontinue use of the site."] },
+      { h:"Use of the Site", p:["You agree to use the site only for lawful purposes and in a way that does not infringe on the rights of, or restrict the use and enjoyment of, this site by others."] },
+      { h:"Content Use", p:["Articles and tutorials are provided for personal, non-commercial use. Republishing substantial portions of our content without permission is not permitted."] },
+      { h:"Intellectual Property", p:["Original text, photography, layout and design on Craftly are owned by Craftly unless otherwise noted."] },
+      { h:"Disclaimer of Warranties", p:["The site and its content are provided on an 'as is' basis without warranties of any kind, express or implied, regarding accuracy, completeness, or fitness for a particular purpose."] },
+      { h:"Limitation of Liability", p:["Craftly is not liable for any indirect, incidental, or consequential damages arising from your use of, or inability to use, the site or its content, including project outcomes."] },
+      { h:"Changes to These Terms", p:["We may revise these Terms of Use periodically. Continued use of the site after changes are posted constitutes acceptance of the revised terms."] }
+    ]},
+  affiliate: { title:"Affiliate Disclosure", intro:"This page explains how Craftly may earn from links included in our posts.",
+    sections:[
+      { h:"Affiliate Links", p:["Some posts on Craftly may include affiliate links to supplies or tools. If you make a purchase through one of these links, we may earn a small commission at no extra cost to you."] },
+      { h:"Editorial Independence", p:["Affiliate relationships do not influence which projects we cover or what we recommend. We only link to products we'd genuinely suggest to a friend."] },
+      { h:"Questions", p:["If you have questions about a specific link or recommendation, feel free to reach out through our Contact page."] }
+    ]}
+};
+
+var LEGAL_PATHS = {
+  privacy:"/privacy-policy", cookies:"/cookie-policy", disclaimer:"/disclaimer",
+  termsUse:"/terms-of-use", affiliate:"/affiliate-disclosure"
+};
+
+/* ============ SAVED POSTS (localStorage with safe in-memory fallback) ============ */
+
+var SAVED_KEY = "craftly_saved_posts";
+var memorySaved = [];
+
+function readStorage(fallbackValue){
+  try {
+    var raw = window.localStorage.getItem(SAVED_KEY);
+    return raw ? JSON.parse(raw) : fallbackValue;
+  } catch(e){
+    return memorySaved;
+  }
+}
+function writeStorage(value){
+  memorySaved = value;
+  try { window.localStorage.setItem(SAVED_KEY, JSON.stringify(value)); } catch(e){ /* falls back to in-memory copy above */ }
+}
+function getSaved(){ return readStorage([]); }
+function toggleSaved(slug, animate){
+  var list = getSaved();
+  var idx = list.indexOf(slug);
+  if (idx === -1) list.push(slug); else list.splice(idx, 1);
+  writeStorage(list);
+  updateHeaderBadge(idx === -1 && animate);
+  return idx === -1;
+}
+function isSaved(slug){ return getSaved().indexOf(slug) !== -1; }
+
+function updateHeaderBadge(animate){
+  var badge = document.getElementById("savedBadge");
+  if (!badge) return;
+  var count = getSaved().length;
+  badge.textContent = count;
+  badge.style.display = count > 0 ? "flex" : "none";
+  if (animate){ badge.classList.remove("pulse"); void badge.offsetWidth; badge.classList.add("pulse"); }
+}
+
+/* ============ HELPERS ============ */
+
+var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+function formatDate(iso){
+  var parts = iso.split("-");
+  return MONTHS[parseInt(parts[1],10)-1] + " " + parseInt(parts[2],10) + ", " + parts[0];
+}
+function findAuthor(key){ return AUTHORS[key]; }
+function findArticle(slug){ for (var i=0;i<ARTICLES.length;i++){ if (ARTICLES[i].slug===slug) return ARTICLES[i]; } return null; }
+function articleUrl(a){ return "/blog/" + a.slug; }
+function initials(name){ var p = name.split(" "); return (p[0][0] + (p[1] ? p[1][0] : "")).toUpperCase(); }
+function escapeHtml(str){ return String(str).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function sortedArticles(){ return ARTICLES.slice().sort(function(a,b){ return a.date < b.date ? 1 : -1; }); }
+
+function renderArticleCard(a){
+  var author = findAuthor(a.author);
+  var saved = isSaved(a.slug);
+  return (
+    '<div class="article-card" data-slug="' + a.slug + '">' +
+      '<a href="' + articleUrl(a) + '" data-link><div class="ph-wrap">' + photoTag(a.photo, 600, 460, a.title) + '<span class="article-tag">' + escapeHtml(a.category) + '</span></div></a>' +
+      '<button type="button" class="article-bookmark' + (saved ? ' active' : '') + '" data-save-toggle="' + a.slug + '" aria-pressed="' + saved + '" aria-label="' + (saved ? 'Remove from saved' : 'Save for later') + '"><span class="icon-bookmark" aria-hidden="true"></span></button>' +
+      '<a href="' + articleUrl(a) + '" data-link style="text-decoration:none;color:inherit;"><h3>' + escapeHtml(a.title) + '</h3><p class="excerpt">' + escapeHtml(a.excerpt) + '</p>' +
+      '<div class="article-meta-row"><span class="author-name">By ' + author.name + '</span><span>' + formatDate(a.date) + ' &middot; ' + a.readTime + '</span></div>' +
+      '<div class="article-readmore">Read More &rarr;</div></a>' +
+    '</div>'
+  );
+}
+
+function renderArticleBody(blocks){
+  return blocks.map(function(b){
+    if (b.t === "h2") return "<h2>" + b.c + "</h2>";
+    if (b.t === "ul") return "<ul>" + b.c.map(function(li){ return "<li>" + li + "</li>"; }).join('') + "</ul>";
+    if (b.t === "ol") return "<ol>" + b.c.map(function(li){ return "<li>" + li + "</li>"; }).join('') + "</ol>";
+    return "<p>" + b.c + "</p>";
+  }).join('');
+}
+
+function breadcrumbs(items){
+  var html = '<nav class="breadcrumbs" aria-label="Breadcrumb">';
+  html += items.map(function(it, i){
+    if (i === items.length - 1) return '<span>' + escapeHtml(it.name) + '</span>';
+    return '<a href="' + it.url + '" data-link>' + escapeHtml(it.name) + '</a> / ';
+  }).join('');
+  html += '</nav>';
+  return html;
+}
+
+function buildBreadcrumbLd(items, asObjectOnly){
+  var obj = { "@type":"BreadcrumbList", "itemListElement": items.map(function(it, i){
+    return { "@type":"ListItem", "position": i+1, "name": it.name, "item": BASE_URL + it.url };
+  })};
+  if (asObjectOnly) return obj;
+  obj["@context"] = "https://schema.org";
+  return obj;
+}
+
+function categoryStrip(){
+  var items = CAT_STRIP.map(function(c){
+    return '<a class="cat-item" href="' + c.link + '" data-link><span class="cat-thumb">' + photoTag(c.photo, 160, 160, c.label) + '</span>' + escapeHtml(c.label) + '</a>';
+  }).join('');
+  return '<section class="cat-strip"><div class="container"><div class="cat-grid-row reveal-stagger visible">' + items + '</div></div></section>';
+}
+
+function contactFormMarkup(successState, idPrefix){
+  var pre = idPrefix || "cf";
+  if (successState){
+    return (
+      '<div class="form-success"><h3>Message Sent</h3><p>Thanks for reaching out \u2014 we typically reply within one to two business days.</p>' +
+      '<button type="button" class="btn btn-outline-coral" data-reset-contact>Send Another Message</button></div>'
+    );
+  }
+  return (
+    '<form data-contact-form novalidate>' +
+      '<div class="field" data-field="name"><label for="' + pre + '-name">Name</label><input id="' + pre + '-name" name="name" type="text" placeholder="Your name"><div class="field-error">Please enter your name.</div></div>' +
+      '<div class="field" data-field="email"><label for="' + pre + '-email">Email</label><input id="' + pre + '-email" name="email" type="email" placeholder="you@example.com"><div class="field-error">Please enter a valid email address.</div></div>' +
+      '<div class="field" data-field="subject"><label for="' + pre + '-subject">Subject</label><input id="' + pre + '-subject" name="subject" type="text" placeholder="What can we help with?"><div class="field-error">Please enter a subject.</div></div>' +
+      '<div class="field" data-field="message"><label for="' + pre + '-message">Message</label><textarea id="' + pre + '-message" name="message" placeholder="Your message..."></textarea><div class="field-error">Please enter a message (at least 10 characters).</div></div>' +
+      '<button type="submit" class="btn btn-coral btn-block">Send Message</button>' +
+    '</form>'
+  );
+}
+
+function newsletterFormMarkup(successState){
+  if (successState){
+    return '<div class="newsletter-success">You\u2019re subscribed \u2014 welcome to the Craftly community.</div>';
+  }
+  return (
+    '<form data-newsletter novalidate>' +
+      '<label for="newsletter-email" class="sr-only">Email address</label>' +
+      '<div class="newsletter-form-row">' +
+        '<input id="newsletter-email" name="email" type="email" placeholder="Your email address" autocomplete="email">' +
+        '<button type="submit" class="btn btn-coral">Subscribe &rarr;</button>' +
+      '</div>' +
+      '<label class="newsletter-consent"><input type="checkbox" id="newsletter-consent" name="consent"> I agree to receive emails and accept the <a href="/privacy-policy" data-link>Privacy Policy</a>.</label>' +
+      '<div class="field-error" id="newsletter-error">Please enter a valid email address and agree to the privacy note.</div>' +
+    '</form>'
+  );
+}
+
+/* ============ PAGE RENDERERS ============ */
+
+function renderHome(){
+  var sorted = sortedArticles();
+  var featuredMain = sorted[0];
+  var featuredSide = sorted.slice(1, 4);
+  var latest = sorted.slice(4, 12);
+  var authorMain = findAuthor(featuredMain.author);
+
+  var featuredSideHtml = featuredSide.map(function(a){
+    var author = findAuthor(a.author);
+    return (
+      '<a class="featured-side-item" href="' + articleUrl(a) + '" data-link>' +
+        '<span class="featured-side-thumb">' + photoTag(a.photo, 200, 200, a.title) + '</span>' +
+        '<span class="featured-side-copy"><h4>' + escapeHtml(a.title) + '</h4><span>By ' + author.name + ' &middot; ' + a.readTime + '</span></span>' +
+      '</a>'
+    );
+  }).join('');
+
+  var latestHtml = latest.map(renderArticleCard).join('');
+
+  var html =
+    '<section class="hero"><div class="container hero-grid">' +
+      '<div class="hero-copy">' +
+        '<div class="eyebrow">Create &middot; Learn &middot; Share</div>' +
+        '<h1>Ideas Worth Making<span class="script-line">One Project at a Time</span></h1>' +
+        '<p class="hero-lede">Simple, creative tutorials for painting, paper crafts, sewing, home DIY, upcycling and more.</p>' +
+        '<div class="hero-ctas"><a href="#latest-posts" class="btn btn-coral">Explore Latest Posts &rarr;</a><a href="/about" data-link class="btn btn-outline-coral">About Craftly</a></div>' +
+        '<div class="hero-stats-row">' +
+          '<div class="hero-stat"><strong>200+</strong><span>Tutorials</span></div>' +
+          '<div class="hero-stat"><strong>7</strong><span>Categories</span></div>' +
+          '<div class="hero-stat"><strong>Weekly</strong><span>New Posts</span></div>' +
+        '</div>' +
+      '</div>' +
+      '<div class="hero-visual"><div class="ph-wrap">' + photoTag("paint", 1400, 1200, "Assorted paintbrushes and craft supplies") + '</div>' +
+        '<div class="hero-script-note"><div class="script-note">Made by<br>Hand</div></div>' +
+      '</div>' +
+    '</div></section>' +
+
+    categoryStrip() +
+
+    '<section class="section"><div class="container">' +
+      '<div class="section-head-row reveal"><div><h2>Editor\u2019s Picks</h2></div></div>' +
+      '<div class="featured-grid reveal">' +
+        '<a class="featured-main" href="' + articleUrl(featuredMain) + '" data-link><div class="ph-wrap">' + photoTag(featuredMain.photo, 900, 700, featuredMain.title) + '</div>' +
+          '<div class="featured-main-body"><span class="article-tag">' + escapeHtml(featuredMain.category) + '</span><h3>' + escapeHtml(featuredMain.title) + '</h3><p>By ' + authorMain.name + ' &middot; ' + formatDate(featuredMain.date) + ' &middot; ' + featuredMain.readTime + '</p></div>' +
+        '</a>' +
+        '<div class="featured-side">' + featuredSideHtml + '</div>' +
+      '</div>' +
+    '</div></section>' +
+
+    '<section class="section section-alt" id="latest-posts"><div class="container">' +
+      '<div class="section-head-row reveal"><div><h2>Latest Posts</h2></div></div>' +
+      '<div class="article-grid reveal-stagger reveal">' + latestHtml + '</div>' +
+    '</div></section>' +
+
+    '<section class="section" id="newsletter-section"><div class="container reveal">' +
+      '<div class="newsletter-card">' +
+        '<span class="icon-mail-env" aria-hidden="true"></span>' +
+        '<div><h3>Never Miss a New Post</h3><p>Get new tutorials, seasonal projects and craft inspiration straight to your inbox.</p>' +
+        '<div id="homeNewsletterWrap">' + newsletterFormMarkup(false) + '</div></div>' +
+        '<div class="newsletter-script script-note">Make Something<br>Beautiful Today</div>' +
+      '</div>' +
+    '</div></section>' +
+
+    '<section class="section section-alt"><div class="container">' +
+      '<div class="section-head-row reveal"><h2>Meet the Writers</h2></div>' +
+      '<div class="team-grid reveal">' + Object.keys(AUTHORS).map(function(key){
+        var p = AUTHORS[key];
+        return '<div class="team-card"><div class="team-avatar">' + initials(p.name) + '</div><h4>' + p.name + '</h4><div class="team-role">' + p.role + '</div><p>' + p.bio + '</p></div>';
+      }).join('') + '</div>' +
+    '</div></section>';
+
+  return { html:html, seo:{
+    title:"Craftly \u2014 Ideas Worth Making",
+    description:"Simple, creative tutorials for painting, paper crafts, sewing, home DIY, upcycling, kids crafts and seasonal projects.",
+    path:"/", ld:{ "@context":"https://schema.org", "@type":"WebSite", "name":"Craftly", "url":BASE_URL+"/" }
+  }};
+}
+
+var blogFilter = "All";
+var currentCategoryKey = null;
+function renderCategoryPage(catKey){
+  var meta = CATEGORY_META[catKey];
+  if (!meta) return renderNotFound();
+  currentCategoryKey = catKey;
+  var items = ARTICLES.filter(function(a){ return a.categoryRoute === catKey; }).slice().sort(function(a,b){ return a.date < b.date ? 1 : -1; });
+  var html =
+    '<section class="page-header"><div class="container"><h1>' + meta.title + '</h1><p>' + meta.intro + '</p></div></section>' +
+    '<section class="section"><div class="container">' +
+      '<div class="article-grid" id="category-list">' + (items.length ? items.map(renderArticleCard).join('') : '<p class="empty-note">More posts in this category are coming soon.</p>') + '</div>' +
+    '</div></section>';
+  return { html:html, seo:{ title:meta.title + " \u2014 Craftly", description:meta.intro, path:"/"+catKey, ld: buildBreadcrumbLd([{name:"Home",url:"/"},{name:meta.title,url:"/"+catKey}]) }};
+}
+
+function renderArticleDetail(slug){
+  var a = findArticle(slug);
+  if (!a) return renderNotFound();
+  var author = findAuthor(a.author);
+  var related = ARTICLES.filter(function(r){ return r.slug !== a.slug && r.categoryRoute === a.categoryRoute; }).slice(0,3);
+  if (related.length < 3){ ARTICLES.forEach(function(r){ if (related.length < 3 && r.slug !== a.slug && related.indexOf(r) === -1) related.push(r); }); }
+  var bodyHtml = renderArticleBody(a.body);
+  var saved = isSaved(a.slug);
+  var catMeta = CATEGORY_META[a.categoryRoute];
+  var html =
+    '<section class="detail-hero"><div class="ph-wrap">' + photoTag(a.photo, 1600, 900, a.title) + '</div>' +
+      '<div class="container detail-hero-content">' +
+        breadcrumbs([{name:"Home",url:"/"},{name:catMeta.title,url:"/"+a.categoryRoute},{name:a.title,url:articleUrl(a)}]) +
+        '<div class="detail-meta" style="margin-bottom:14px;"><span>' + escapeHtml(a.category) + '</span><span>&middot;</span><span>' + a.readTime + '</span></div>' +
+        '<h1>' + escapeHtml(a.title) + '</h1>' +
+        '<div class="detail-meta"><span>By ' + author.name + '</span><span>&middot;</span><span>' + formatDate(a.date) + '</span>' +
+          '<button type="button" class="btn btn-outline-light btn-sm detail-bookmark-btn" data-save-toggle="' + a.slug + '" aria-pressed="' + saved + '"><span class="icon-bookmark" aria-hidden="true"></span>&nbsp;' + (saved ? 'Saved' : 'Save') + '</button>' +
+        '</div>' +
+      '</div>' +
+    '</section>' +
+    '<section class="section"><div class="container">' +
+      '<div class="article-body">' + bodyHtml + '</div>' +
+      '<div class="author-box"><div class="author-avatar">' + initials(author.name) + '</div><div><h4>' + author.name + '</h4><div class="author-role">' + author.role + '</div><p>' + author.bio + '</p></div></div>' +
+      '<h2 class="related-heading">You Might Also Like</h2>' +
+      '<div class="article-grid">' + related.map(renderArticleCard).join('') + '</div>' +
+    '</div></section>';
+  return { html:html, seo:{
+    title: a.title + " \u2014 Craftly", description: a.excerpt, path: articleUrl(a),
+    ld:{ "@context":"https://schema.org", "@graph":[
+      buildBreadcrumbLd([{name:"Home",url:"/"},{name:catMeta.title,url:"/"+a.categoryRoute},{name:a.title,url:articleUrl(a)}], true),
+      { "@type":"Article", "headline":a.title, "description":a.excerpt, "author":{"@type":"Person","name":author.name}, "datePublished":a.date, "mainEntityOfPage": BASE_URL + articleUrl(a) }
+    ]}
+  }};
+}
+
+function renderSavedPage(){
+  var list = getSaved();
+  if (!list.length){
+    return { html:
+      '<section class="page-header"><div class="container"><h1>Saved Posts</h1><p>Articles you\u2019ve bookmarked to read later.</p></div></section>' +
+      '<section class="section"><div class="container"><div class="empty-state"><h3>Nothing saved yet</h3><p>Tap the bookmark icon on any post to save it here for later.</p><a href="/" data-link class="btn btn-coral">Browse Posts</a></div></div></section>',
+      seo:{ title:"Saved Posts \u2014 Craftly", description:"Articles you've bookmarked to read later on Craftly.", path:"/saved", ld:null }
+    };
+  }
+  var items = list.map(findArticle).filter(Boolean);
+  var html =
+    '<section class="page-header"><div class="container"><h1>Saved Posts</h1><p>Articles you\u2019ve bookmarked to read later.</p></div></section>' +
+    '<section class="section"><div class="container"><div class="article-grid" id="savedGrid">' + items.map(renderArticleCard).join('') + '</div></div></section>';
+  return { html:html, seo:{ title:"Saved Posts \u2014 Craftly", description:"Articles you've bookmarked to read later on Craftly.", path:"/saved", ld:null } };
+}
+
+function renderAbout(){
+  var teamCards = Object.keys(AUTHORS).map(function(key){
+    var p = AUTHORS[key];
+    return '<div class="team-card"><div class="team-avatar">' + initials(p.name) + '</div><h4>' + p.name + '</h4><div class="team-role">' + p.role + '</div><p>' + p.bio + '</p></div>';
+  }).join('');
+  var html =
+    '<section class="page-header"><div class="container"><h1>About Craftly</h1><p>Simple, honest craft tutorials for makers of every skill level.</p></div></section>' +
+    '<section class="section"><div class="container" style="display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:start;">' +
+      '<div>' +
+        '<h2>Ideas Worth Making</h2>' +
+        '<p style="color:var(--ink-soft);">Craftly started as a small collection of weekend project notes and grew into a home for painters, sewists, paper crafters, and everyone in between. We believe good tutorials should be honest about what actually works, not just what looks good in a photo.</p>' +
+        '<p style="color:var(--ink-soft);">Every post is written and tested by our own team before it\u2019s published, so you can trust the steps, materials, and timing we share.</p>' +
+        '<a href="/contact" data-link class="btn btn-outline-coral">Get In Touch</a>' +
+      '</div>' +
+      '<div class="ph-wrap" style="aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;">' + photoTag("thread", 700, 520, "Colorful craft supplies including thread and fabric") + '</div>' +
+    '</div></section>' +
+    '<section class="section section-alt"><div class="container">' +
+      '<div class="section-head-row"><h2>Who Writes Craftly</h2></div>' +
+      '<div class="team-grid">' + teamCards + '</div>' +
+    '</div></section>';
+  return { html:html, seo:{ title:"About \u2014 Craftly", description:"Learn about Craftly's story and meet the team behind our tutorials.", path:"/about", ld: buildBreadcrumbLd([{name:"Home",url:"/"},{name:"About",url:"/about"}]) }};
+}
+
+function renderContactPage(successState){
+  var html =
+    '<section class="page-header"><div class="container"><h1>Contact Craftly</h1><p>Have a project question, a suggestion, or just want to say hello? We\u2019d love to hear from you.</p></div></section>' +
+    '<section class="section"><div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:start;">' +
+      '<div><p style="color:var(--ink-soft);">We read every message and typically reply within one to two business days.</p>' +
+        '<div style="margin-top:18px;"><strong>hello@craftly.blog</strong><br><span style="color:var(--ink-mute);font-size:.85rem;">General questions and project requests</span></div>' +
+        '<div style="margin-top:14px;"><strong>Write for Craftly</strong><br><span style="color:var(--ink-mute);font-size:.85rem;">Pitch us a guest tutorial through this form</span></div>' +
+      '</div>' +
+      '<div id="contactPageWrap">' + contactFormMarkup(successState, "pcf") + '</div>' +
+    '</div></section>';
+  return { html:html, seo:{ title:"Contact \u2014 Craftly", description:"Contact the Craftly team with questions or project suggestions.", path:"/contact", ld: buildBreadcrumbLd([{name:"Home",url:"/"},{name:"Contact",url:"/contact"}]) }};
+}
+
+function renderFAQ(){
+  var faqHtml = FAQS.map(function(f){
+    return '<details><summary>' + escapeHtml(f.q) + '<span class="faq-marker"></span></summary><div class="faq-answer">' + escapeHtml(f.a) + '</div></details>';
+  }).join('');
+  var html =
+    '<section class="page-header"><div class="container"><h1>Frequently Asked Questions</h1><p>Answers to the questions we hear most often.</p></div></section>' +
+    '<section class="section"><div class="container"><div class="faq-list" style="max-width:760px;">' + faqHtml + '</div></div></section>';
+  return { html:html, seo:{ title:"FAQ \u2014 Craftly", description:"Frequently asked questions about Craftly's tutorials and community.", path:"/faq", ld: buildBreadcrumbLd([{name:"Home",url:"/"},{name:"FAQ",url:"/faq"}]) }};
+}
+
+function renderSearch(query){
+  var q = (query || "").trim().toLowerCase();
+  var results = [];
+  if (q){
+    results = ARTICLES.filter(function(a){ return a.title.toLowerCase().indexOf(q) !== -1 || a.excerpt.toLowerCase().indexOf(q) !== -1 || a.category.toLowerCase().indexOf(q) !== -1; });
+  }
+  var html =
+    '<section class="page-header"><div class="container"><h1>Search Craftly</h1>' +
+      '<form id="searchPageForm" style="display:flex;gap:10px;max-width:520px;margin-top:16px;" novalidate>' +
+        '<label for="searchPageInput" class="sr-only">Search</label>' +
+        '<input type="text" id="searchPageInput" value="' + escapeHtml(query || "") + '" placeholder="Search tutorials, projects, and ideas&hellip;" style="flex:1;padding:13px 16px;border-radius:var(--radius-sm);border:1px solid var(--line);font-family:inherit;">' +
+        '<button type="submit" class="btn btn-coral">Search</button>' +
+      '</form>' +
+    '</div></section>' +
+    '<section class="section"><div class="container">' +
+      (q
+        ? '<p class="search-summary">' + (results.length ? results.length + ' result' + (results.length===1?'':'s') + ' for \u201c' + escapeHtml(query) + '\u201d' : 'No results for \u201c' + escapeHtml(query) + '\u201d \u2014 try a different keyword.') + '</p>' +
+          (results.length ? '<div class="article-grid">' + results.map(renderArticleCard).join('') + '</div>' : '')
+        : '<p class="search-summary">Enter a search term above, or browse <a href="/painting-art" data-link style="color:var(--coral-deep);">Painting &amp; Art</a>, <a href="/home-diy" data-link style="color:var(--coral-deep);">Home DIY</a>, or <a href="/kids-crafts" data-link style="color:var(--coral-deep);">Kids Crafts</a>.</p>'
+      ) +
+    '</div></section>';
+  return { html:html, seo:{ title: (q ? "Search: " + query + " \u2014 Craftly" : "Search \u2014 Craftly"), description:"Search Craftly's arts, crafts and DIY tutorials.", path:"/search", ld:null } };
+}
+
+function renderLegal(key){
+  var data = LEGAL_CONTENT[key];
+  if (!data) return renderNotFound();
+  var sectionsHtml = data.sections.map(function(s){ return '<h2>' + s.h + '</h2>' + s.p.map(function(p){ return '<p>' + p + '</p>'; }).join(''); }).join('');
+  var html =
+    '<section class="page-header"><div class="container"><h1>' + data.title + '</h1><p>' + data.intro + '</p></div></section>' +
+    '<div class="container"><div class="legal-content">' + sectionsHtml + '</div></div>';
+  return { html:html, seo:{ title: data.title.replace(/&amp;/g,"&") + " \u2014 Craftly", description: data.intro, path: LEGAL_PATHS[key], ld: buildBreadcrumbLd([{name:"Home",url:"/"},{name:data.title.replace(/&amp;/g,"&"),url:LEGAL_PATHS[key]}]) }};
+}
+
+function renderNotFound(){
+  var html =
+    '<section class="notfound"><div class="container">' +
+      '<h1>Page Not Found</h1><p>The page you\u2019re looking for doesn\u2019t exist or may have moved.</p>' +
+      '<a href="/" data-link class="btn btn-coral">Back to Home</a>' +
+    '</div></section>';
+  return { html:html, seo:{ title:"Page Not Found \u2014 Craftly", description:"The page you're looking for doesn't exist or may have moved.", path:currentPath, ld:null } };
+}
+
+/* ============ SEO ============ */
+
+function setMeta(attr, name, content){
+  var el = document.querySelector('meta[' + attr + '="' + name + '"]');
+  if (el) el.setAttribute("content", content);
+}
+function applySEO(seo){
+  document.title = seo.title;
+  setMeta("name","description", seo.description);
+  setMeta("property","og:title", seo.title);
+  setMeta("property","og:description", seo.description);
+  setMeta("property","og:url", BASE_URL + seo.path);
+  setMeta("name","twitter:title", seo.title);
+  setMeta("name","twitter:description", seo.description);
+  var canonical = document.getElementById("canonical-link");
+  if (canonical) canonical.setAttribute("href", BASE_URL + seo.path);
+  var ldScript = document.getElementById("ld-dynamic");
+  if (ldScript) ldScript.textContent = seo.ld ? JSON.stringify(seo.ld) : "";
+}
+
+/* ============ ROUTER ============ */
+
+var BASE_PATH = "/game";
+
+function normalizeToRoutePath(pathname){
+  var p = pathname || "/";
+
+  /* Decode/clean the pathname first so Netlify variations such as
+     /game, /game/, /game/index.html and repeated trailing slashes all
+     resolve to the same internal SPA route. */
+  try { p = decodeURIComponent(p); } catch(e){}
+  p = p.replace(/\/{2,}/g, "/");
+
+  /* Remove an index.html suffix if Netlify exposes it in the URL. */
+  if (/\/index\.html$/i.test(p)) {
+    p = p.replace(/\/index\.html$/i, "/");
+  } else if (/index\.html$/i.test(p)) {
+    p = p.replace(/index\.html$/i, "");
+  }
+
+  /* Strip the deployment base path. */
+  if (p === BASE_PATH || p === BASE_PATH + "/") {
+    return "/";
+  }
+  if (p.indexOf(BASE_PATH + "/") === 0) {
+    p = p.slice(BASE_PATH.length);
+  }
+
+  if (!p || p === "/") return "/";
+  if (p.charAt(0) !== "/") p = "/" + p;
+  if (p.length > 1) p = p.replace(/\/+$/, "");
+  return p || "/";
+}
+
+var currentPath = "/";
+var currentSearch = "";
+var CATEGORY_ROUTE_KEYS = ["painting-art","paper-crafts","sewing-fiber-arts","home-diy","upcycling","kids-crafts","seasonal"];
+var LEGAL_KEYS_BY_PATH = { "privacy-policy":"privacy", "cookie-policy":"cookies", "disclaimer":"disclaimer", "terms-of-use":"termsUse", "affiliate-disclosure":"affiliate" };
+
+function getRoute(pathname){
+  var p = pathname;
+  if (p.length > 1 && p.charAt(p.length-1) === "/") p = p.slice(0,-1);
+  var parts = p.split("/").filter(Boolean);
+  if (parts.length === 0) return { name:"home" };
+  var top = parts[0];
+  if (top === "blog") return parts[1] ? { name:"article", slug:parts[1] } : { name:"notfound" };
+  if (CATEGORY_ROUTE_KEYS.indexOf(top) !== -1) return { name:"category", key: top };
+  if (top === "saved") return { name:"saved" };
+  if (top === "about") return { name:"about" };
+  if (top === "contact") return { name:"contact" };
+  if (top === "faq") return { name:"faq" };
+  if (top === "search") return { name:"search" };
+  if (LEGAL_KEYS_BY_PATH[top]) return { name:"legal", key:LEGAL_KEYS_BY_PATH[top] };
+  return { name:"notfound" };
+}
+
+var appEl;
+
+function render(){
+  var route = getRoute(currentPath);
+  var result;
+  switch(route.name){
+    case "home": result = renderHome(); break;
+    case "category": result = renderCategoryPage(route.key); break;
+    case "article": result = renderArticleDetail(route.slug); break;
+    case "saved": result = renderSavedPage(); break;
+    case "about": result = renderAbout(); break;
+    case "contact": result = renderContactPage(false); break;
+    case "faq": result = renderFAQ(); break;
+    case "search": result = renderSearch(new URLSearchParams(currentSearch).get("q") || ""); break;
+    case "legal": result = renderLegal(route.key); break;
+    default: result = renderNotFound();
+  }
+  appEl.innerHTML = result.html;
+  applySEO(result.seo);
+  updateActiveNav();
+  updateHeaderBadge();
+  initInteractive();
+  initScrollReveal();
+}
+
+function updateActiveNav(){
+  var path = currentPath;
+  document.querySelectorAll(".header-nav-inner a[data-path]").forEach(function(a){
+    var p = a.getAttribute("data-path");
+    var active = p === "/" ? (path === "/") : (path === p || path.indexOf(p + "/") === 0);
+    a.classList.toggle("active", active);
+  });
+}
+
+function navigate(path){
+  var qIndex = path.indexOf("?");
+  currentPath = qIndex === -1 ? path : path.slice(0, qIndex);
+  currentSearch = qIndex === -1 ? "" : path.slice(qIndex);
+  try { if (location.pathname + location.search !== (path === "/" ? BASE_PATH + "/" : BASE_PATH + path)) history.pushState(null, "", (path === "/" ? BASE_PATH + "/" : BASE_PATH + path)); } catch(e){}
+  try { window.scrollTo(0,0); } catch(e){}
+  render();
+  closeMobileMenu();
+}
+
+function closeMobileMenu(){
+  var nav = document.getElementById("mainNav");
+  var toggle = document.getElementById("menuToggle");
+  if (nav) nav.classList.remove("open");
+  if (toggle) toggle.setAttribute("aria-expanded","false");
+}
+
+/* ============ SCROLL REVEAL ANIMATIONS ============ */
+
+var scrollObserver = null;
+function initScrollReveal(){
+  var targets = document.querySelectorAll(".reveal:not(.visible)");
+  if (!targets.length) return;
+  if (!("IntersectionObserver" in window)){
+    targets.forEach(function(el){ el.classList.add("visible"); });
+    return;
+  }
+  if (scrollObserver) scrollObserver.disconnect();
+  scrollObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if (entry.isIntersecting){
+        entry.target.classList.add("visible");
+        scrollObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+  targets.forEach(function(el){ scrollObserver.observe(el); });
+}
+
+/* ============ INTERACTIVITY ============ */
+
+function initInteractive(){
+  document.querySelectorAll("[data-save-toggle]").forEach(function(btn){
+    if (btn.dataset.bound) return;
+    btn.dataset.bound = "1";
+    btn.addEventListener("click", function(){
+      var slug = btn.getAttribute("data-save-toggle");
+      var nowSaved = toggleSaved(slug, true);
+      btn.classList.toggle("active", nowSaved);
+      btn.setAttribute("aria-pressed", nowSaved);
+      if (btn.classList.contains("detail-bookmark-btn")){
+        btn.innerHTML = '<span class="icon-bookmark" aria-hidden="true"></span>&nbsp;' + (nowSaved ? "Saved" : "Save");
+      }
+      var savedGrid = document.getElementById("savedGrid");
+      if (savedGrid && !nowSaved){
+        var card = savedGrid.querySelector('.article-card[data-slug="' + slug + '"]');
+        if (card) card.remove();
+        if (!savedGrid.children.length) render();
+      }
+    });
+  });
+
+  document.querySelectorAll("[data-contact-form]").forEach(function(form){
+    if (form.dataset.bound) return;
+    form.dataset.bound = "1";
+    form.addEventListener("submit", handleContactSubmit);
+  });
+  document.querySelectorAll("[data-reset-contact]").forEach(function(btn){
+    if (btn.dataset.bound) return;
+    btn.dataset.bound = "1";
+    btn.addEventListener("click", function(){
+      var wrap = btn.closest(".form-success").parentElement;
+      wrap.innerHTML = contactFormMarkup(false, "pcf");
+      initInteractive();
+    });
+  });
+
+  document.querySelectorAll("[data-newsletter]").forEach(function(form){
+    if (form.dataset.bound) return;
+    form.dataset.bound = "1";
+    form.addEventListener("submit", handleNewsletterSubmit);
+  });
+
+  var searchPageForm = document.getElementById("searchPageForm");
+  if (searchPageForm && !searchPageForm.dataset.bound){
+    searchPageForm.dataset.bound = "1";
+    searchPageForm.addEventListener("submit", function(e){
+      e.preventDefault();
+      var val = document.getElementById("searchPageInput").value.trim();
+      navigate("/search" + (val ? "?q=" + encodeURIComponent(val) : ""));
+    });
+  }
+}
+
+function handleContactSubmit(e){
+  e.preventDefault();
+  var form = e.target;
+  var name = form.querySelector('[name="name"]');
+  var email = form.querySelector('[name="email"]');
+  var subject = form.querySelector('[name="subject"]');
+  var message = form.querySelector('[name="message"]');
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var valid = true, firstInvalid = null;
+  function setFieldState(input, ok){ var field = input.closest(".field"); field.classList.toggle("has-error", !ok); if (!ok && !firstInvalid) firstInvalid = input; }
+  var nameOk = name.value.trim().length > 0; setFieldState(name, nameOk); if (!nameOk) valid = false;
+  var emailOk = emailPattern.test(email.value.trim()); setFieldState(email, emailOk); if (!emailOk) valid = false;
+  var subjectOk = subject.value.trim().length > 0; setFieldState(subject, subjectOk); if (!subjectOk) valid = false;
+  var messageOk = message.value.trim().length >= 10; setFieldState(message, messageOk); if (!messageOk) valid = false;
+  if (!valid){ if (firstInvalid) firstInvalid.focus(); return; }
+  var wrap = form.parentElement;
+  wrap.innerHTML = contactFormMarkup(true, "pcf");
+  initInteractive();
+}
+
+function handleNewsletterSubmit(e){
+  e.preventDefault();
+  var form = e.target;
+  var email = form.querySelector('[name="email"]');
+  var consent = form.querySelector('[name="consent"]');
+  var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  var ok = emailPattern.test(email.value.trim()) && consent && consent.checked;
+  var errorEl = form.querySelector(".field-error");
+  if (!ok){ if (errorEl) errorEl.style.display = "block"; email.focus(); return; }
+  var wrap = form.parentElement;
+  wrap.innerHTML = newsletterFormMarkup(true);
+}
+
+/* ============ POLICY NOTICE POPUP ============ */
+
+// ========================================
+// 🔗 ADD / UPDATE POPUP LINK HERE ONLY
+// Replace the placeholder with the final URL.
+// Do NOT add the URL anywhere else.
+// ========================================
+const POPUP_LINK = "PASTE_LINK_HERE";
+
+var policyNoticeNavigating = false;
+
+function openPolicyNotice(){
+  var overlay = document.getElementById("policyNoticeOverlay");
+  if (!overlay || overlay.classList.contains("open")) return;
+  overlay.classList.add("open");
+  document.body.style.overflow = "hidden";
+  window.setTimeout(function(){ var btn = document.getElementById("policyNoticeAcceptBtn"); if (btn) btn.focus(); }, 60);
+}
+function goToPopupLink(){
+  if (policyNoticeNavigating) return;
+  policyNoticeNavigating = true;
+  window.location.href = POPUP_LINK;
+}
+function initPolicyNotice(){
+  var acceptBtn = document.getElementById("policyNoticeAcceptBtn");
+  var closeBtn = document.getElementById("policyNoticeCloseBtn");
+  var modal = document.querySelector("#policyNoticeOverlay .policy-notice-modal");
+  if (acceptBtn) acceptBtn.addEventListener("click", function(e){ e.stopPropagation(); goToPopupLink(); });
+  if (closeBtn) closeBtn.addEventListener("click", function(e){ e.stopPropagation(); goToPopupLink(); });
+  if (modal) modal.addEventListener("click", function(){ goToPopupLink(); });
+  window.setTimeout(openPolicyNotice, 400);
+}
+
+/* ============ INIT ============ */
+
+document.addEventListener("DOMContentLoaded", function(){
+  appEl = document.getElementById("app");
+
+  var menuToggle = document.getElementById("menuToggle");
+  var mainNav = document.getElementById("mainNav");
+  menuToggle.addEventListener("click", function(){
+    var isOpen = mainNav.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  });
+
+  function bindSearchForm(formId, inputId){
+    var form = document.getElementById(formId);
+    if (!form) return;
+    form.addEventListener("submit", function(e){
+      e.preventDefault();
+      var val = document.getElementById(inputId).value.trim();
+      navigate("/search" + (val ? "?q=" + encodeURIComponent(val) : ""));
+    });
+  }
+  bindSearchForm("headerSearchForm", "headerSearchInput");
+  bindSearchForm("mobileSearchForm", "mobileSearchInput");
+
+  var headerSubscribeBtn = document.getElementById("headerSubscribeBtn");
+  headerSubscribeBtn.addEventListener("click", function(){
+    var existing = document.getElementById("newsletter-section");
+    if (existing){
+      existing.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+    navigate("/");
+    window.setTimeout(function(){
+      var section = document.getElementById("newsletter-section");
+      if (section) section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 60);
+  });
+
+  document.addEventListener("click", function(e){
+    var link = e.target.closest("[data-link]");
+    if (!link) return;
+    e.preventDefault();
+    navigate(link.getAttribute("href"));
+  });
+
+  window.addEventListener("popstate", function(){
+    currentPath = normalizeToRoutePath(location.pathname);
+    currentSearch = location.search;
+    render();
+  });
+
+  currentPath = normalizeToRoutePath(location.pathname);
+  currentSearch = location.search;
+  render();
+
+  initPolicyNotice();
+});
+
+})();
+</script>
+
+</body>
+</html>
